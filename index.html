@@ -57,10 +57,10 @@
     color:#fff;font-family:"Jost";font-weight:600;font-size:13px;
     flex:none;
   }
-  .brand-name{font-family:"Jost";font-weight:600;font-size:17px;letter-spacing:.06em;white-space:nowrap;}
-  .brand-name small{display:block;font-family:"Noto Sans JP";font-weight:400;font-size:10px;letter-spacing:.14em;color:var(--ink-soft);margin-top:1px;}
+  .brand-name{font-family:"Jost";font-weight:600;font-size:18px;letter-spacing:.06em;white-space:nowrap;}
+  .brand-name small{display:block;font-family:"Noto Sans JP";font-weight:400;font-size:11px;letter-spacing:.14em;color:var(--ink-soft);margin-top:1px;}
   .shop-link{
-    font-size:12px;letter-spacing:.03em;color:var(--ink-soft);
+    font-size:13px;letter-spacing:.03em;color:var(--ink-soft);
     border-bottom:1px solid var(--ink-soft);padding-bottom:2px;
     white-space:nowrap;
   }
@@ -73,31 +73,31 @@
     display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
   }
   .hero-kicker{
-    font-family:"Jost";font-weight:500;font-size:13px;letter-spacing:.28em;
+    font-family:"Jost";font-weight:500;font-size:14px;letter-spacing:.28em;
     color:var(--red);margin:0 0 18px;
   }
   .hero h1{
-    font-size:clamp(38px,5.2vw,64px);
+    font-size:clamp(40px,5.6vw,68px);
     line-height:1.28;
     font-weight:900;
     margin:0 0 22px;
     letter-spacing:.01em;
   }
   .hero-lead{
-    font-size:15px;line-height:1.9;color:var(--ink-soft);
+    font-size:16.5px;line-height:1.9;color:var(--ink-soft);
     margin:0 0 30px;max-width:38em;
   }
   .hero-search{
     display:flex;align-items:flex-end;gap:10px;max-width:420px;
     border-bottom:2px solid var(--ink);padding-bottom:10px;
   }
-  .hero-search label{font-family:"Jost";font-size:11px;letter-spacing:.18em;color:var(--ink-soft);}
-  .hero-search-icon{flex:none;width:16px;height:16px;position:relative;margin-bottom:1px;}
-  .hero-search-icon::before{content:"";position:absolute;left:0;top:0;width:11px;height:11px;border:1.6px solid var(--ink);border-radius:50%;}
+  .hero-search label{font-family:"Jost";font-size:12px;letter-spacing:.18em;color:var(--ink-soft);}
+  .hero-search-icon{flex:none;width:17px;height:17px;position:relative;margin-bottom:1px;}
+  .hero-search-icon::before{content:"";position:absolute;left:0;top:0;width:12px;height:12px;border:1.6px solid var(--ink);border-radius:50%;}
   .hero-search-icon::after{content:"";position:absolute;right:0;bottom:0;width:6px;height:1.6px;background:var(--ink);transform:rotate(45deg);transform-origin:right;}
   #searchInput{
     flex:1;border:none;background:none;outline:none;
-    font-family:"Noto Sans JP";font-size:16px;color:var(--ink);padding:0;
+    font-family:"Noto Sans JP";font-size:17px;color:var(--ink);padding:0;
   }
   #searchInput::placeholder{color:#a4917d;}
 
@@ -116,8 +116,8 @@
     transition:transform .25s ease;
   }
   .cup:hover{transform:translateY(-4px);}
-  .cup-count{font-family:"Jost";font-weight:600;font-size:26px;line-height:1;}
-  .cup-label{font-size:10.5px;letter-spacing:.04em;margin-top:6px;text-align:center;padding:0 10px;line-height:1.4;}
+  .cup-count{font-family:"Jost";font-weight:600;font-size:28px;line-height:1;}
+  .cup-label{font-size:12px;letter-spacing:.04em;margin-top:6px;text-align:center;padding:0 10px;line-height:1.4;}
   .cup[data-cat="recipe"]{width:118px;height:118px;left:2%;top:6%;}
   .cup[data-cat="brew"]{width:150px;height:150px;left:30%;top:40%;}
   .cup[data-cat="beans"]{width:128px;height:128px;left:62%;top:0%;}
@@ -129,20 +129,19 @@
     position:sticky;top:0;z-index:20;
     background:rgba(255,255,255,.92);backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
-    overflow-x:auto;
   }
   .shelf-index-inner{
     max-width:1180px;margin:0 auto;padding:10px 24px;
-    display:flex;gap:8px;
+    display:flex;flex-wrap:wrap;gap:8px;
   }
   .nav-pill{
     display:flex;align-items:center;gap:7px;flex:none;
-    padding:9px 16px;font-size:12.5px;white-space:nowrap;
+    padding:9px 16px;font-size:13.5px;white-space:nowrap;
     border-radius:999px;border:1px solid var(--line);
     color:var(--ink-soft);
   }
   .nav-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--dot);flex:none;}
-  .nav-pill .n{font-family:"Jost";color:var(--ink-soft);font-size:11px;}
+  .nav-pill .n{font-family:"Jost";color:var(--ink-soft);font-size:12px;}
   .nav-pill.active{
     background:color-mix(in srgb, var(--dot) 10%, white);
     border-color:var(--dot);color:var(--ink);font-weight:500;
@@ -156,12 +155,12 @@
     display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:end;
     margin-bottom:32px;
   }
-  .shelf-num{font-family:"Jost";font-size:15px;color:var(--accent);letter-spacing:.1em;padding-bottom:6px;}
-  .shelf-en{font-family:"Jost";font-size:12px;letter-spacing:.24em;color:var(--accent);margin:0 0 6px;}
-  .shelf-head h2{font-size:clamp(24px,3vw,32px);margin:0 0 10px;font-weight:900;}
-  .shelf-desc{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.8;max-width:44em;}
-  .shelf-count{font-family:"Jost";font-size:30px;color:var(--accent);line-height:1;padding-bottom:4px;}
-  .shelf-count small{font-family:"Noto Sans JP";font-size:11px;color:var(--ink-soft);margin-left:2px;}
+  .shelf-num{font-family:"Jost";font-size:16px;color:var(--accent);letter-spacing:.1em;padding-bottom:6px;}
+  .shelf-en{font-family:"Jost";font-size:13px;letter-spacing:.24em;color:var(--accent);margin:0 0 6px;}
+  .shelf-head h2{font-size:clamp(26px,3.2vw,34px);margin:0 0 10px;font-weight:900;}
+  .shelf-desc{margin:0;font-size:14.5px;color:var(--ink-soft);line-height:1.8;max-width:44em;}
+  .shelf-count{font-family:"Jost";font-size:32px;color:var(--accent);line-height:1;padding-bottom:4px;}
+  .shelf-count small{font-family:"Noto Sans JP";font-size:12px;color:var(--ink-soft);margin-left:2px;}
 
   .featured{
     display:grid;grid-template-columns:.85fr 1.15fr;gap:0;margin-bottom:6px;
@@ -173,11 +172,11 @@
   .featured:hover .featured-media img{transform:scale(1.03);}
   .featured-body{padding:30px 36px;display:flex;flex-direction:column;justify-content:center;}
   .featured-tag{
-    display:inline-block;font-family:"Jost";font-size:11px;letter-spacing:.16em;
+    display:inline-block;font-family:"Jost";font-size:12px;letter-spacing:.16em;
     color:#fff;background:var(--accent);padding:4px 12px;border-radius:999px;margin-bottom:16px;width:fit-content;
   }
-  .featured-body h3{font-size:clamp(18px,2vw,23px);line-height:1.6;margin:0 0 16px;font-weight:700;}
-  .featured-body time{font-family:"Jost";font-size:12px;color:var(--ink-soft);letter-spacing:.05em;}
+  .featured-body h3{font-size:clamp(19px,2.2vw,25px);line-height:1.6;margin:0 0 16px;font-weight:700;}
+  .featured-body time{font-family:"Jost";font-size:13px;color:var(--ink-soft);letter-spacing:.05em;}
 
   /* ---------- note-style list ---------- */
   .note-list{display:flex;flex-direction:column;}
@@ -187,44 +186,44 @@
   }
   .note-row:last-of-type{border-bottom:none;}
   .note-thumb{
-    flex:none;width:128px;aspect-ratio:4/3;border-radius:var(--radius-sm);
+    flex:none;width:140px;aspect-ratio:4/3;border-radius:var(--radius-sm);
     overflow:hidden;background:var(--thumb-bg);
   }
   .note-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease;}
   .note-row:hover .note-thumb img{transform:scale(1.05);}
   .note-body{flex:1;min-width:0;}
   .note-title{
-    font-size:14.5px;line-height:1.7;margin:0 0 10px;font-weight:500;color:var(--ink);
+    font-size:16px;line-height:1.7;margin:0 0 10px;font-weight:500;color:var(--ink);
     display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
   }
   .note-row:hover .note-title{color:var(--accent);}
   .note-meta{display:flex;align-items:center;gap:8px;}
-  .note-date{font-family:"Jost";font-size:11.5px;color:var(--ink-soft);}
+  .note-date{font-family:"Jost";font-size:12.5px;color:var(--ink-soft);}
   .cat-dot{width:7px;height:7px;border-radius:50%;flex:none;}
 
   .load-more{
-    display:block;margin:22px auto 0;padding:11px 28px;
+    display:block;margin:22px auto 0;padding:12px 28px;
     border:1px solid var(--line);border-radius:999px;background:#fff;
-    font-family:"Noto Sans JP";font-size:12.5px;color:var(--ink);cursor:pointer;
+    font-family:"Noto Sans JP";font-size:13.5px;color:var(--ink);cursor:pointer;
   }
   .load-more:hover{border-color:var(--accent);color:var(--accent);}
 
   /* ---------- search results ---------- */
   .search-results{max-width:1180px;margin:0 auto;padding:56px 24px 80px;}
   .search-results-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;}
-  .search-results-head h2{font-size:20px;margin:0;font-weight:700;}
-  .search-results-head .n{font-family:"Jost";color:var(--red);font-size:14px;}
-  .search-empty{color:var(--ink-soft);font-size:14px;padding:20px 0;}
+  .search-results-head h2{font-size:22px;margin:0;font-weight:700;}
+  .search-results-head .n{font-family:"Jost";color:var(--red);font-size:15px;}
+  .search-empty{color:var(--ink-soft);font-size:15px;padding:20px 0;}
 
   /* ---------- footer ---------- */
   .site-footer{
     background:var(--ink);color:#e9e0d6;padding:48px 24px 30px;margin-top:20px;
   }
   .footer-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;}
-  .footer-brand{font-family:"Jost";font-size:16px;letter-spacing:.08em;}
-  .footer-brand small{display:block;font-family:"Noto Sans JP";font-size:11px;color:#b4a48f;margin-top:6px;letter-spacing:.05em;}
-  .footer-link{font-size:12.5px;border-bottom:1px solid rgba(246,239,225,.4);padding-bottom:2px;}
-  .footer-copy{font-size:11px;color:#8a7c68;margin-top:24px;max-width:1180px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px;}
+  .footer-brand{font-family:"Jost";font-size:17px;letter-spacing:.08em;}
+  .footer-brand small{display:block;font-family:"Noto Sans JP";font-size:12px;color:#b4a48f;margin-top:6px;letter-spacing:.05em;}
+  .footer-link{font-size:13.5px;border-bottom:1px solid rgba(246,239,225,.4);padding-bottom:2px;}
+  .footer-copy{font-size:12px;color:#8a7c68;margin-top:24px;max-width:1180px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px;}
 
   /* ---------- responsive ---------- */
   @media(max-width:900px){
@@ -234,26 +233,27 @@
     .shelf-head{grid-template-columns:auto 1fr;}
     .shelf-count{grid-column:2;justify-self:start;padding-top:4px;}
     .site-header{padding:16px 20px;flex-wrap:wrap;row-gap:10px;}
-    .shop-link{font-size:11.5px;}
+    .shop-link{font-size:12.5px;}
     .wrap,.hero-inner,.shelf-inner,.search-results{padding-left:20px;padding-right:20px;}
     .footer-copy{padding-left:20px;padding-right:20px;}
-    .note-thumb{width:104px;}
+    .note-thumb{width:112px;}
     .note-row{gap:14px;padding:16px 2px;}
+    .shelf-index{position:static;}
   }
   @media(max-width:400px){
-    .brand-name{font-size:15px;}
+    .brand-name{font-size:16px;}
   }
   @media(max-width:520px){
-    .hero h1{font-size:34px;}
+    .hero h1{font-size:36px;}
     .cup[data-cat="recipe"]{width:96px;height:96px;left:0%;top:4%;}
     .cup[data-cat="brew"]{width:124px;height:124px;left:32%;top:36%;}
     .cup[data-cat="beans"]{width:104px;height:104px;left:64%;top:2%;}
     .cup[data-cat="gift"]{width:82px;height:82px;left:6%;top:68%;}
     .cup[data-cat="life"]{width:98px;height:98px;left:66%;top:60%;}
-    .cup-count{font-size:21px;}
-    .cup-label{font-size:9.5px;}
-    .note-thumb{width:86px;}
-    .note-title{font-size:13.5px;}
+    .cup-count{font-size:22px;}
+    .cup-label{font-size:10.5px;}
+    .note-thumb{width:92px;}
+    .note-title{font-size:14.5px;}
   }
 </style>
 </head>
@@ -314,7 +314,92 @@ const CATS = [
   {key:'life',   num:'05', en:'LIFE',    ja:'澤井珈琲のくらし', desc:'お店のこと、コーヒーのある毎日のこと。', color:'var(--c-life)'},
 ];
 
-const ITEMS = [{"title":"住所や名前を知らなくても大丈夫。ソーシャルギフトでコーヒーの贈り物をお届けします","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/social-gift/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/12345047/sg_hero_rms.jpg","date":"2026-09-18","cat":"gift"},{"title":"定期購入は10%OFF＆送料無料。回数しばりなしでいつでも停止OK","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/subscription/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/contents_teiki00.jpg","date":"2026-09-11","cat":"life"},{"title":"【意外と簡単】初心者でも全然OK！コーヒー屋さんでお買い物する方法","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/shopmanual/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_shopmanual_00.jpg","date":"2026-09-11","cat":"life"},{"title":"【食いしんぼう祭】楽天グルメフェスティバルの楽しみ方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/kuishinbou/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/event/foodfes26_ct_01.jpg","date":"2026-09-11","cat":"gift"},{"title":"【検証】 カフェオレ、ミルクでここまで変わるの？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cafemilk/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cafemilk_00.jpg","date":"2026-09-07","cat":"recipe"},{"title":"【味はどれだけ変わる？】同じコーヒー豆をホットとアイスで飲み比べ！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hotorice/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hotorice_00.jpg","date":"2026-09-03","cat":"brew"},{"title":"【絶品スイーツ】澤井のオリジナルスイーツでアフタヌーンティー！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/teaparty/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_teaparty_00.jpg","date":"2026-08-26","cat":"gift"},{"title":"【簡単レシピ】おうちで作れる大人のコーヒーアイスクリーム","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/coffeeice/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_coffeeice_00.jpg","date":"2026-08-24","cat":"recipe"},{"title":"【簡単レシピ】水出し珈琲で作る！夏のアイスドリンク2選","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/icearrange/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_icearrange_00.jpg","date":"2026-08-19","cat":"brew"},{"title":"【検証】急冷式アイスコーヒーは氷を先に入れたほうが良い？後に入れたほうが良い？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/atokasakika/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_atokasakika_00.jpg","date":"2026-08-18","cat":"brew"},{"title":"【専門店直伝】急冷式アイスコーヒーを美味しく淹れる方法をお教えします！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/rapidcooling/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_rapidcooling_00.jpg","date":"2026-08-18","cat":"brew"},{"title":"【世界の珈琲シリーズ】エチオピア編 意外なアレンジレシピもご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ethiopia/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ethiopia_00.jpg","date":"2026-08-18","cat":"beans"},{"title":"【入門編】いまさら聞けないコーヒーの疑問にお答えします！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/beginnersmanual/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_beginnersm_00.jpg","date":"2026-08-18","cat":"beans"},{"title":"【リアルな悩みにお答え】贈り物に！専門店の本格コーヒー4選","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/realgift/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_realgift_00.jpg","date":"2026-08-18","cat":"gift"},{"title":"【本格カフェモカ】珈琲専門店がオススメする本格アイスカフェモカの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cafemocha/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cafemocha_00.jpg","date":"2026-08-17","cat":"recipe"},{"title":"【気楽に楽しむ】プロほどこだわらない珈琲のこと3選","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/pro3/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_pro3_00.jpg","date":"2026-07-30","cat":"life"},{"title":"おうちで簡単カフェレシピ2選♪ハニージンジャーコーヒー&抹茶あんコーヒー","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/angin/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_angin_00.jpg","date":"2026-07-30","cat":"recipe"},{"title":"【製造体験】くうのコーヒー豆袋詰めチャレンジ♪コーヒー製造の裏側に潜入！？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/maker/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_maker_00.jpg","date":"2026-07-30","cat":"life"},{"title":"【梱包体験】くうの梱包チャレンジ♪ギフトラッピング対決も！？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/box/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_box_00.jpg","date":"2026-07-30","cat":"life"},{"title":"【2月のコーヒー習慣】忙しい人ほど飲んでほしい一杯の役割","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/feb/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_feb_00.jpg","date":"2026-07-30","cat":"life"},{"title":"【レシピ紹介】電子レンジで簡単！マグカップコーヒースイーツ♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/mgsweet/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_mgsweet_00.jpg","date":"2026-07-29","cat":"recipe"},{"title":"【七草がゆの日】やさしく寄り添うコーヒーBEST3！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/okayu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_okayu_00.jpg","date":"2026-07-29","cat":"life"},{"title":"【お餅活用法】お餅×コーヒー！？アレンジレシピをご紹介します！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/mochi/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_mochi_00.jpg","date":"2026-07-29","cat":"recipe"},{"title":"【世界の珈琲シリーズ】オーストリア編！“アインシュペナー”の作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/wien/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_wien_00.jpg","date":"2026-07-28","cat":"beans"},{"title":"ひんやり香る専門店の冷たいアイスコーヒー　2026お中元・夏ギフト","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/natsu_gift/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/season/sg2026_ct_1600_900_2.jpg","date":"2026-07-14","cat":"gift"},{"title":"【春限定♪】コーヒー専門店のさくら香るドリンク&スイーツ","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cherryblossom/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cherryblossom_00.jpg","date":"2026-03-18","cat":"gift"},{"title":"【世界の珈琲シリーズ】イタリア編♪マロッキーノ風コーヒーの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/italy/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_italy_00.jpg","date":"2026-03-10","cat":"beans"},{"title":"【大人のコーヒー】ブランデー香るカフェ・ロワイヤルをご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/alcohol/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_alcohol_00.jpg","date":"2026-02-25","cat":"recipe"},{"title":"【美味しく作るコツ】珈琲専門店がオススメする本格ホットカフェオレの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cafeaulait/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cafeaulait_00.jpg","date":"2026-02-06","cat":"recipe"},{"title":"【ゲイシャ解説】楽天市場で一番売れてる珈琲屋さんが伝える幻のコーヒーとは","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/gei/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_gei_00.jpg","date":"2026-01-09","cat":"beans"},{"title":"【美味しく作るコツ】珈琲専門店がオススメするキャラメルラテの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/caramel/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_caramel_00.jpg","date":"2025-12-10","cat":"recipe"},{"title":"【簡単&カワイイ】クリスマスデコレーションスイーツ紹介♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/oyatsuxmas/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_oyatsuxmas_00.jpg","date":"2025-12-04","cat":"gift"},{"title":"【世界の珈琲シリーズ】ベトナム編！甘くてまろやか“エッグコーヒー”の作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/egg/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_egg_00.jpg","date":"2025-11-21","cat":"beans"},{"title":"【美味しく健康！】コーヒーの葉から作られたお茶をご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/tea/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_tea_00.jpg","date":"2025-11-17","cat":"beans"},{"title":"【おうちカフェ】体も心も温まるハニージンジャーラテの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ginger/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ginger_00.jpg","date":"2025-11-03","cat":"recipe"},{"title":"【美味しく作るコツ】大人から子供まで楽しめる簡単カプチーノの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cap/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cap_00.jpg","date":"2025-10-29","cat":"recipe"},{"title":"【簡単レシピ】コーヒー専門店が教える！まろやか本格ソイラテの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/mame/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_mame_00.jpg","date":"2025-10-22","cat":"recipe"},{"title":"【パン×コーヒー】パンの種類別でおすすめコーヒーをご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/pan/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_pan_00.jpg","date":"2025-10-08","cat":"recipe"},{"title":"【銘柄紹介】世界一と称される柔らかな酸味！ハワイコナについて詳しく解説♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hawaicona/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hawaicona_00.jpg","date":"2025-09-15","cat":"beans"},{"title":"【銘柄紹介】当店で初めて作られたブレンド「ロマンブレンド」の秘密","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/yumeroman/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_yumeroman_00.jpg","date":"2025-09-07","cat":"beans"},{"title":"【銘柄紹介】澤井珈琲人気No.1ブレンド「やくもブレンド」の秘密とは？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/yakumo/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_yakumo_00.jpg","date":"2025-08-30","cat":"beans"},{"title":"【紹介】焙煎士がお薦めするアイスコーヒーにピッタリな銘柄3選","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/icecoffee_m/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_icecoffee_m_00.jpg","date":"2025-08-11","cat":"beans"},{"title":"【美味しく淹れるコツ】水出し珈琲バッグでもっと美味しく淹れるコツをご紹介します♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/mizudasikotu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_mizudasikotu_00.jpg","date":"2025-08-01","cat":"brew"},{"title":"【夏のコーヒー習慣】もっとおいしく＆快適に楽しむ3つのポイント💡","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/point/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_point_00.jpg","date":"2025-07-18","cat":"life"},{"title":"【コーヒー雑学】知ると飲みたくなる♪日本人のコーヒー愛に迫る！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/zatugaku/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_zatugaku_00.jpg","date":"2025-07-15","cat":"beans"},{"title":"【おうちカフェ】暑い夏にぴったり！アレンジアイスコーヒー第2弾♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cafe_ice2/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cafe_ice2_00.jpg","date":"2025-07-04","cat":"recipe"},{"title":"【おうちカフェ】簡単！暑い夏にぴったり！アレンジアイスコーヒーの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ouchicafe_ice/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ouchicafe_ice_00.jpg","date":"2025-06-26","cat":"recipe"},{"title":"【おうちカフェ】フルーツで爽やか♪紅茶と珈琲のアレンジレシピ","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ouchicafe/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ouchicafe_00.jpg","date":"2025-06-14","cat":"recipe"},{"title":"【美味しく作るコツ】急冷式で作る美味しいアイスコーヒーの作り方！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/kyurei/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_kyurei_00.jpg","date":"2025-06-14","cat":"brew"},{"title":"【新感覚】コーヒー×お酒！？焼酎＆リキュールが驚きの美味しさ│父の日にもおすすめ","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/shochu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_shochu_00.jpg","date":"2025-06-04","cat":"recipe"},{"title":"【誤解されやすい？】実は奥深いフレーバーコーヒーの魅力をご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/flavor/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_flavor_00.jpg","date":"2025-05-26","cat":"beans"},{"title":"【徹底解説】浸漬式ドリッパーで淹れる悪魔のレシピ！？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/akumadrip/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_akumadrip_00.jpg","date":"2025-05-04","cat":"brew"},{"title":"【美味しく淹れるコツ】セットして置いておくだけ！氷出し珈琲の作り方をご紹介♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/icecoffee/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_icecoffee_00.jpg","date":"2025-04-25","cat":"brew"},{"title":"【初心者必見】これだけ揃えればOK！コーヒー初心者がまず買うべき器具3選！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/kigu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_kigu_00.jpg","date":"2025-04-09","cat":"brew"},{"title":"【隠し味】コーヒーを入れるだけでもっと美味しくなる料理をご紹介♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/kakushiaji/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_kakushiaji_00.jpg","date":"2025-03-31","cat":"recipe"},{"title":"【簡単＆本格】ドリップバッグで作る！専門店直伝の急冷アイスコーヒー術♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/kyuureisiki/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_kyuureisiki_00.jpg","date":"2025-03-26","cat":"brew"},{"title":"【選ぶコツ】絶対に外さない！コーヒーギフトの選び方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/gift/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_gift_00.jpg","date":"2025-03-23","cat":"gift"},{"title":"【お得情報】澤井珈琲でオトクに！楽しく！ショッピングする方法！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/line/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_line_00.jpg","date":"2025-03-03","cat":"life"},{"title":"【思いやり】コーヒーを美味しく飲むためのマナーについてご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/manners/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_manners_00.jpg","date":"2025-02-20","cat":"life"},{"title":"【徹底解説】意外と知らない？！コーヒーを飲む効果的なタイミングとは","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/timing/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_timing_00.jpg","date":"2025-02-07","cat":"life"},{"title":"【もったいない！？】コーヒーの粉の再利用方法徹底解説","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/powder/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_powder_00.jpg","date":"2025-02-02","cat":"life"},{"title":"【いつ飲みたい？】珈琲専門店が教えるシーン別のおすすめコーヒー","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/when/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/imgrc0094296683.jpg","date":"2025-01-30","cat":"life"},{"title":"【徹底解説】コーヒーを美味しく淹れるために不可欠な水について！軟水と硬水とは？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/omizu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_omizu_00.jpg","date":"2025-01-21","cat":"brew"},{"title":"【徹底解説】コーヒーの味を決める精製方法とコーヒー豆の見分け方とは？！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/seisei/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_seisei_00.jpg","date":"2025-01-11","cat":"beans"},{"title":"【徹底解説】コーヒーを美味しく淹れるコツ！お湯の注ぎ方を比較してみた！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/handdrip/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_handdrip_00.jpg","date":"2025-01-03","cat":"brew"},{"title":"【徹底解説】チョコレートと相性の良いコーヒーは？簡単アレンジレシピもご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/choko/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_choko_00.jpg","date":"2024-12-27","cat":"recipe"},{"title":"【3分でわかる】2025年 コーヒーがもっと美味しくなる秘伝のコーヒーの淹れ方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/irekata/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_irekata_01.jpg","date":"2024-12-25","cat":"brew"},{"title":"【簡単】コーヒーと〇〇を混ぜるだけ！ダイエットに嬉しいアレンジコーヒーをご紹介♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ryoku/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ryoku_00.jpg","date":"2024-12-16","cat":"life"},{"title":"【徹底比較】コーヒー専門店が教えるドリッパーの選び方！円すいと台形の違いは？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/dripper/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_dripper_00.jpg","date":"2024-11-29","cat":"brew"},{"title":"【徹底比較】コーヒーフィルターで味は変わる！？白と茶の違いを検証してみた","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/filter/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_filter_00.jpg","date":"2024-11-29","cat":"brew"},{"title":"【徹底比較】お湯の温度でコーヒーの味が変わる！？おすすめのお湯の温度は？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/onndo/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_onndo_00.jpg","date":"2024-11-22","cat":"brew"},{"title":"【もったいない！？】秋冬にも大活躍！コーヒーの粉の再利用方法徹底解説","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/coffeegrounds/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_coffeegrounds_00.gif","date":"2024-11-10","cat":"life"},{"title":"【徹底解説】インスタントコーヒーを美味しく淹れる裏技3選！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/inst3s/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_inst3s_00.jpg","date":"2024-11-09","cat":"brew"},{"title":"【徹底解説】コーヒーを淹れる際のNG行動3選！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ng3/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ng3_00.jpg","date":"2024-11-04","cat":"brew"},{"title":"【お得情報】澤井珈琲楽天市場店でお得にお買い物する裏技！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/urawaza/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_urawaza_00.jpg","date":"2024-11-01","cat":"life"},{"title":"【検証】蒸らし時間でコーヒーの味わいはどう変わる？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/murashi/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_murashi_00.jpg","date":"2024-10-28","cat":"brew"},{"title":"【徹底比較】コーヒー豆の挽き方で味わいは変わる？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hikikata/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hikikata_00.jpg","date":"2024-10-28","cat":"brew"},{"title":"【徹底解説】コーヒーの品種の違いを徹底解説！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hinshu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hinsyu_00.jpg","date":"2024-10-19","cat":"beans"},{"title":"【初心者必見】珈琲専門店がオススメする初めてのコーヒーの選び方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hajimetecoffee/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hajimetecoffee_00.jpg","date":"2024-09-19","cat":"beans"},{"title":"【徹底解説】カフェインレスコーヒーについて教えます！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/noncafe/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_noncafe_00.jpg","date":"2024-09-09","cat":"brew"},{"title":"【コーヒーの保存方法】珈琲屋さんがオススメするコーヒー豆の保存方法","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hozon/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hozon_00.jpg","date":"2024-09-02","cat":"brew"}];
+// 記事データ: 新しい記事が公開されたら、このITEMSに新しいオブジェクトを1行追加するだけでOK（並び順は自動で日付順に並び替わります）。
+// 記事を削除する場合は該当するオブジェクトの行をまるごと削除してください。
+// cat は 'recipe' / 'brew' / 'beans' / 'gift' / 'life' のいずれか（CATSの定義を参照）。
+const ITEMS = [
+  {"title":"住所や名前を知らなくても大丈夫。ソーシャルギフトでコーヒーの贈り物をお届けします","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/social-gift/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/12345047/sg_hero_rms.jpg","date":"2026-09-18","cat":"gift"},
+  {"title":"定期購入は10%OFF＆送料無料。回数しばりなしでいつでも停止OK","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/subscription/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/contents_teiki00.jpg","date":"2026-09-11","cat":"life"},
+  {"title":"【意外と簡単】初心者でも全然OK！コーヒー屋さんでお買い物する方法","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/shopmanual/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_shopmanual_00.jpg","date":"2026-09-11","cat":"life"},
+  {"title":"【食いしんぼう祭】楽天グルメフェスティバルの楽しみ方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/kuishinbou/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/event/foodfes26_ct_01.jpg","date":"2026-09-11","cat":"gift"},
+  {"title":"【検証】 カフェオレ、ミルクでここまで変わるの？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cafemilk/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cafemilk_00.jpg","date":"2026-09-07","cat":"recipe"},
+  {"title":"【味はどれだけ変わる？】同じコーヒー豆をホットとアイスで飲み比べ！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hotorice/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hotorice_00.jpg","date":"2026-09-03","cat":"brew"},
+  {"title":"【絶品スイーツ】澤井のオリジナルスイーツでアフタヌーンティー！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/teaparty/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_teaparty_00.jpg","date":"2026-08-26","cat":"gift"},
+  {"title":"【簡単レシピ】おうちで作れる大人のコーヒーアイスクリーム","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/coffeeice/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_coffeeice_00.jpg","date":"2026-08-24","cat":"recipe"},
+  {"title":"【簡単レシピ】水出し珈琲で作る！夏のアイスドリンク2選","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/icearrange/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_icearrange_00.jpg","date":"2026-08-19","cat":"brew"},
+  {"title":"【検証】急冷式アイスコーヒーは氷を先に入れたほうが良い？後に入れたほうが良い？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/atokasakika/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_atokasakika_00.jpg","date":"2026-08-18","cat":"brew"},
+  {"title":"【専門店直伝】急冷式アイスコーヒーを美味しく淹れる方法をお教えします！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/rapidcooling/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_rapidcooling_00.jpg","date":"2026-08-18","cat":"brew"},
+  {"title":"【世界の珈琲シリーズ】エチオピア編 意外なアレンジレシピもご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ethiopia/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ethiopia_00.jpg","date":"2026-08-18","cat":"beans"},
+  {"title":"【入門編】いまさら聞けないコーヒーの疑問にお答えします！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/beginnersmanual/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_beginnersm_00.jpg","date":"2026-08-18","cat":"beans"},
+  {"title":"【リアルな悩みにお答え】贈り物に！専門店の本格コーヒー4選","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/realgift/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_realgift_00.jpg","date":"2026-08-18","cat":"gift"},
+  {"title":"【本格カフェモカ】珈琲専門店がオススメする本格アイスカフェモカの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cafemocha/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cafemocha_00.jpg","date":"2026-08-17","cat":"recipe"},
+  {"title":"【気楽に楽しむ】プロほどこだわらない珈琲のこと3選","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/pro3/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_pro3_00.jpg","date":"2026-07-30","cat":"life"},
+  {"title":"おうちで簡単カフェレシピ2選♪ハニージンジャーコーヒー&抹茶あんコーヒー","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/angin/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_angin_00.jpg","date":"2026-07-30","cat":"recipe"},
+  {"title":"【製造体験】くうのコーヒー豆袋詰めチャレンジ♪コーヒー製造の裏側に潜入！？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/maker/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_maker_00.jpg","date":"2026-07-30","cat":"life"},
+  {"title":"【梱包体験】くうの梱包チャレンジ♪ギフトラッピング対決も！？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/box/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_box_00.jpg","date":"2026-07-30","cat":"life"},
+  {"title":"【2月のコーヒー習慣】忙しい人ほど飲んでほしい一杯の役割","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/feb/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_feb_00.jpg","date":"2026-07-30","cat":"life"},
+  {"title":"【レシピ紹介】電子レンジで簡単！マグカップコーヒースイーツ♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/mgsweet/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_mgsweet_00.jpg","date":"2026-07-29","cat":"recipe"},
+  {"title":"【七草がゆの日】やさしく寄り添うコーヒーBEST3！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/okayu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_okayu_00.jpg","date":"2026-07-29","cat":"life"},
+  {"title":"【お餅活用法】お餅×コーヒー！？アレンジレシピをご紹介します！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/mochi/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_mochi_00.jpg","date":"2026-07-29","cat":"recipe"},
+  {"title":"【世界の珈琲シリーズ】オーストリア編！“アインシュペナー”の作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/wien/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_wien_00.jpg","date":"2026-07-28","cat":"beans"},
+  {"title":"ひんやり香る専門店の冷たいアイスコーヒー　2026お中元・夏ギフト","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/natsu_gift/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/season/sg2026_ct_1600_900_2.jpg","date":"2026-07-14","cat":"gift"},
+  {"title":"【春限定♪】コーヒー専門店のさくら香るドリンク&スイーツ","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cherryblossom/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cherryblossom_00.jpg","date":"2026-03-18","cat":"gift"},
+  {"title":"【世界の珈琲シリーズ】イタリア編♪マロッキーノ風コーヒーの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/italy/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_italy_00.jpg","date":"2026-03-10","cat":"beans"},
+  {"title":"【大人のコーヒー】ブランデー香るカフェ・ロワイヤルをご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/alcohol/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_alcohol_00.jpg","date":"2026-02-25","cat":"recipe"},
+  {"title":"【美味しく作るコツ】珈琲専門店がオススメする本格ホットカフェオレの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cafeaulait/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cafeaulait_00.jpg","date":"2026-02-06","cat":"recipe"},
+  {"title":"【ゲイシャ解説】楽天市場で一番売れてる珈琲屋さんが伝える幻のコーヒーとは","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/gei/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_gei_00.jpg","date":"2026-01-09","cat":"beans"},
+  {"title":"【美味しく作るコツ】珈琲専門店がオススメするキャラメルラテの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/caramel/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_caramel_00.jpg","date":"2025-12-10","cat":"recipe"},
+  {"title":"【簡単&カワイイ】クリスマスデコレーションスイーツ紹介♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/oyatsuxmas/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_oyatsuxmas_00.jpg","date":"2025-12-04","cat":"gift"},
+  {"title":"【世界の珈琲シリーズ】ベトナム編！甘くてまろやか“エッグコーヒー”の作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/egg/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_egg_00.jpg","date":"2025-11-21","cat":"beans"},
+  {"title":"【美味しく健康！】コーヒーの葉から作られたお茶をご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/tea/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_tea_00.jpg","date":"2025-11-17","cat":"beans"},
+  {"title":"【おうちカフェ】体も心も温まるハニージンジャーラテの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ginger/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ginger_00.jpg","date":"2025-11-03","cat":"recipe"},
+  {"title":"【美味しく作るコツ】大人から子供まで楽しめる簡単カプチーノの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cap/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cap_00.jpg","date":"2025-10-29","cat":"recipe"},
+  {"title":"【簡単レシピ】コーヒー専門店が教える！まろやか本格ソイラテの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/mame/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_mame_00.jpg","date":"2025-10-22","cat":"recipe"},
+  {"title":"【パン×コーヒー】パンの種類別でおすすめコーヒーをご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/pan/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_pan_00.jpg","date":"2025-10-08","cat":"recipe"},
+  {"title":"【銘柄紹介】世界一と称される柔らかな酸味！ハワイコナについて詳しく解説♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hawaicona/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hawaicona_00.jpg","date":"2025-09-15","cat":"beans"},
+  {"title":"【銘柄紹介】当店で初めて作られたブレンド「ロマンブレンド」の秘密","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/yumeroman/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_yumeroman_00.jpg","date":"2025-09-07","cat":"beans"},
+  {"title":"【銘柄紹介】澤井珈琲人気No.1ブレンド「やくもブレンド」の秘密とは？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/yakumo/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_yakumo_00.jpg","date":"2025-08-30","cat":"beans"},
+  {"title":"【紹介】焙煎士がお薦めするアイスコーヒーにピッタリな銘柄3選","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/icecoffee_m/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_icecoffee_m_00.jpg","date":"2025-08-11","cat":"beans"},
+  {"title":"【美味しく淹れるコツ】水出し珈琲バッグでもっと美味しく淹れるコツをご紹介します♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/mizudasikotu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_mizudasikotu_00.jpg","date":"2025-08-01","cat":"brew"},
+  {"title":"【夏のコーヒー習慣】もっとおいしく＆快適に楽しむ3つのポイント💡","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/point/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_point_00.jpg","date":"2025-07-18","cat":"life"},
+  {"title":"【コーヒー雑学】知ると飲みたくなる♪日本人のコーヒー愛に迫る！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/zatugaku/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_zatugaku_00.jpg","date":"2025-07-15","cat":"beans"},
+  {"title":"【おうちカフェ】暑い夏にぴったり！アレンジアイスコーヒー第2弾♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/cafe_ice2/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_cafe_ice2_00.jpg","date":"2025-07-04","cat":"recipe"},
+  {"title":"【おうちカフェ】簡単！暑い夏にぴったり！アレンジアイスコーヒーの作り方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ouchicafe_ice/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ouchicafe_ice_00.jpg","date":"2025-06-26","cat":"recipe"},
+  {"title":"【おうちカフェ】フルーツで爽やか♪紅茶と珈琲のアレンジレシピ","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ouchicafe/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ouchicafe_00.jpg","date":"2025-06-14","cat":"recipe"},
+  {"title":"【美味しく作るコツ】急冷式で作る美味しいアイスコーヒーの作り方！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/kyurei/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_kyurei_00.jpg","date":"2025-06-14","cat":"brew"},
+  {"title":"【新感覚】コーヒー×お酒！？焼酎＆リキュールが驚きの美味しさ│父の日にもおすすめ","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/shochu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_shochu_00.jpg","date":"2025-06-04","cat":"recipe"},
+  {"title":"【誤解されやすい？】実は奥深いフレーバーコーヒーの魅力をご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/flavor/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_flavor_00.jpg","date":"2025-05-26","cat":"beans"},
+  {"title":"【徹底解説】浸漬式ドリッパーで淹れる悪魔のレシピ！？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/akumadrip/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_akumadrip_00.jpg","date":"2025-05-04","cat":"brew"},
+  {"title":"【美味しく淹れるコツ】セットして置いておくだけ！氷出し珈琲の作り方をご紹介♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/icecoffee/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_icecoffee_00.jpg","date":"2025-04-25","cat":"brew"},
+  {"title":"【初心者必見】これだけ揃えればOK！コーヒー初心者がまず買うべき器具3選！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/kigu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_kigu_00.jpg","date":"2025-04-09","cat":"brew"},
+  {"title":"【隠し味】コーヒーを入れるだけでもっと美味しくなる料理をご紹介♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/kakushiaji/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_kakushiaji_00.jpg","date":"2025-03-31","cat":"recipe"},
+  {"title":"【簡単＆本格】ドリップバッグで作る！専門店直伝の急冷アイスコーヒー術♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/kyuureisiki/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_kyuureisiki_00.jpg","date":"2025-03-26","cat":"brew"},
+  {"title":"【選ぶコツ】絶対に外さない！コーヒーギフトの選び方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/gift/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_gift_00.jpg","date":"2025-03-23","cat":"gift"},
+  {"title":"【お得情報】澤井珈琲でオトクに！楽しく！ショッピングする方法！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/line/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_line_00.jpg","date":"2025-03-03","cat":"life"},
+  {"title":"【思いやり】コーヒーを美味しく飲むためのマナーについてご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/manners/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_manners_00.jpg","date":"2025-02-20","cat":"life"},
+  {"title":"【徹底解説】意外と知らない？！コーヒーを飲む効果的なタイミングとは","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/timing/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_timing_00.jpg","date":"2025-02-07","cat":"life"},
+  {"title":"【もったいない！？】コーヒーの粉の再利用方法徹底解説","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/powder/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_powder_00.jpg","date":"2025-02-02","cat":"life"},
+  {"title":"【いつ飲みたい？】珈琲専門店が教えるシーン別のおすすめコーヒー","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/when/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/imgrc0094296683.jpg","date":"2025-01-30","cat":"life"},
+  {"title":"【徹底解説】コーヒーを美味しく淹れるために不可欠な水について！軟水と硬水とは？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/omizu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_omizu_00.jpg","date":"2025-01-21","cat":"brew"},
+  {"title":"【徹底解説】コーヒーの味を決める精製方法とコーヒー豆の見分け方とは？！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/seisei/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_seisei_00.jpg","date":"2025-01-11","cat":"beans"},
+  {"title":"【徹底解説】コーヒーを美味しく淹れるコツ！お湯の注ぎ方を比較してみた！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/handdrip/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_handdrip_00.jpg","date":"2025-01-03","cat":"brew"},
+  {"title":"【徹底解説】チョコレートと相性の良いコーヒーは？簡単アレンジレシピもご紹介！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/choko/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_choko_00.jpg","date":"2024-12-27","cat":"recipe"},
+  {"title":"【3分でわかる】2025年 コーヒーがもっと美味しくなる秘伝のコーヒーの淹れ方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/irekata/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_irekata_01.jpg","date":"2024-12-25","cat":"brew"},
+  {"title":"【簡単】コーヒーと〇〇を混ぜるだけ！ダイエットに嬉しいアレンジコーヒーをご紹介♪","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ryoku/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ryoku_00.jpg","date":"2024-12-16","cat":"life"},
+  {"title":"【徹底比較】コーヒー専門店が教えるドリッパーの選び方！円すいと台形の違いは？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/dripper/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_dripper_00.jpg","date":"2024-11-29","cat":"brew"},
+  {"title":"【徹底比較】コーヒーフィルターで味は変わる！？白と茶の違いを検証してみた","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/filter/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_filter_00.jpg","date":"2024-11-29","cat":"brew"},
+  {"title":"【徹底比較】お湯の温度でコーヒーの味が変わる！？おすすめのお湯の温度は？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/onndo/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_onndo_00.jpg","date":"2024-11-22","cat":"brew"},
+  {"title":"【もったいない！？】秋冬にも大活躍！コーヒーの粉の再利用方法徹底解説","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/coffeegrounds/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_coffeegrounds_00.gif","date":"2024-11-10","cat":"life"},
+  {"title":"【徹底解説】インスタントコーヒーを美味しく淹れる裏技3選！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/inst3s/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_inst3s_00.jpg","date":"2024-11-09","cat":"brew"},
+  {"title":"【徹底解説】コーヒーを淹れる際のNG行動3選！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/ng3/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_ng3_00.jpg","date":"2024-11-04","cat":"brew"},
+  {"title":"【お得情報】澤井珈琲楽天市場店でお得にお買い物する裏技！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/urawaza/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_urawaza_00.jpg","date":"2024-11-01","cat":"life"},
+  {"title":"【検証】蒸らし時間でコーヒーの味わいはどう変わる？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/murashi/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_murashi_00.jpg","date":"2024-10-28","cat":"brew"},
+  {"title":"【徹底比較】コーヒー豆の挽き方で味わいは変わる？","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hikikata/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hikikata_00.jpg","date":"2024-10-28","cat":"brew"},
+  {"title":"【徹底解説】コーヒーの品種の違いを徹底解説！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hinshu/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hinsyu_00.jpg","date":"2024-10-19","cat":"beans"},
+  {"title":"【初心者必見】珈琲専門店がオススメする初めてのコーヒーの選び方","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hajimetecoffee/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hajimetecoffee_00.jpg","date":"2024-09-19","cat":"beans"},
+  {"title":"【徹底解説】カフェインレスコーヒーについて教えます！","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/noncafe/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_noncafe_00.jpg","date":"2024-09-09","cat":"brew"},
+  {"title":"【コーヒーの保存方法】珈琲屋さんがオススメするコーヒー豆の保存方法","href":"https://www.rakuten.co.jp/sawaicoffee-tea/contents/hozon/","img":"https://tshop.r10s.jp/sawaicoffee-tea/cabinet/contents/ct_hozon_00.jpg","date":"2024-09-02","cat":"brew"}
+];
 
 const SYN_GROUPS = [
   ['アイス','冷たい','急冷','氷','ロック'],
@@ -372,7 +457,7 @@ function noteRow(it, opts){
 function renderShelves(){
   const main = document.getElementById('shelves');
   main.innerHTML = CATS.map(c=>{
-    const catItems = ITEMS.filter(i=>i.cat===c.key);
+    const catItems = ITEMS.filter(i=>i.cat===c.key).sort((a,b)=> b.date.localeCompare(a.date));
     const featured = catItems[0];
     const rest = catItems.slice(1);
     const rowsHtml = rest.map((it,i)=>{
@@ -450,7 +535,7 @@ function runSearch(q){
   }
   shelvesEl.hidden = true;
   resultsEl.hidden = false;
-  const found = ITEMS.filter(it=>matches(it,q));
+  const found = ITEMS.filter(it=>matches(it,q)).sort((a,b)=> b.date.localeCompare(a.date));
   document.getElementById('searchCount').textContent = found.length + ' 件';
   const grid = document.getElementById('searchGrid');
   if(found.length === 0){

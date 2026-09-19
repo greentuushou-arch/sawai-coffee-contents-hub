@@ -109,9 +109,8 @@
     background:
       radial-gradient(circle at 34% 28%, rgba(255,255,255,.34), rgba(255,255,255,0) 42%),
       radial-gradient(circle at 50% 50%, var(--cup-color), color-mix(in srgb, var(--cup-color) 65%, #1a0f08) 88%);
-    transition:transform .25s ease;
   }
-  .cup:hover{transform:translateY(-4px);}
+  .cup:hover{filter:brightness(1.08);}
   .cup-count{font-family:"Jost";font-weight:600;font-size:28px;line-height:1;}
   .cup-label{font-size:12px;letter-spacing:.04em;margin-top:6px;text-align:center;padding:0 10px;line-height:1.4;}
   .cup[data-cat="recipe"]{width:118px;height:118px;left:2%;top:6%;}
@@ -119,6 +118,22 @@
   .cup[data-cat="beans"]{width:128px;height:128px;left:62%;top:0%;}
   .cup[data-cat="gift"]{width:98px;height:98px;left:8%;top:64%;}
   .cup[data-cat="life"]{width:120px;height:120px;left:66%;top:56%;}
+
+  @keyframes cupBounce{
+    0%,100%{transform:translateY(0);}
+    30%{transform:translateY(-11px);}
+    50%{transform:translateY(-3px);}
+    68%{transform:translateY(-7px);}
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .cup{animation:cupBounce 2.8s cubic-bezier(.45,0,.2,1) infinite;}
+    .cup[data-cat="recipe"]{animation-duration:2.6s;animation-delay:0s;}
+    .cup[data-cat="brew"]{animation-duration:3s;animation-delay:.4s;}
+    .cup[data-cat="beans"]{animation-duration:2.8s;animation-delay:.8s;}
+    .cup[data-cat="gift"]{animation-duration:2.4s;animation-delay:.2s;}
+    .cup[data-cat="life"]{animation-duration:3.2s;animation-delay:.6s;}
+    .cup:hover{animation-play-state:paused;}
+  }
 
   /* ---------- index nav ---------- */
   .shelf-index{
@@ -148,10 +163,9 @@
   .shelf{padding:60px 0 16px;border-bottom:1px solid var(--line);}
   .shelf-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
   .shelf-head{
-    display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:end;
+    display:grid;grid-template-columns:1fr auto;gap:22px;align-items:end;
     margin-bottom:32px;
   }
-  .shelf-num{font-family:"Jost";font-size:16px;color:var(--accent);letter-spacing:.1em;padding-bottom:6px;}
   .shelf-en{font-family:"Jost";font-size:13px;letter-spacing:.24em;color:var(--accent);margin:0 0 6px;}
   .shelf-head h2{font-size:clamp(26px,3.2vw,34px);margin:0 0 10px;font-weight:900;}
   .shelf-desc{margin:0;font-size:14.5px;color:var(--ink-soft);line-height:1.8;max-width:44em;}
@@ -226,8 +240,8 @@
     .hero-inner{grid-template-columns:1fr;padding:40px 20px 44px;gap:36px;}
     .cupping-tray{height:280px;order:-1;}
     .featured{grid-template-columns:1fr;}
-    .shelf-head{grid-template-columns:auto 1fr;}
-    .shelf-count{grid-column:2;justify-self:start;padding-top:4px;}
+    .shelf-head{grid-template-columns:1fr;}
+    .shelf-count{grid-column:1;justify-self:start;padding-top:4px;}
     .site-header{padding:16px 20px;flex-wrap:wrap;row-gap:10px;}
     .shop-link{font-size:12.5px;}
     .wrap,.hero-inner,.shelf-inner,.search-results{padding-left:20px;padding-right:20px;}
@@ -308,11 +322,11 @@
 
 <script>
 const CATS = [
-  {key:'recipe', num:'01', en:'RECIPE',  ja:'レシピ&アレンジ',   desc:'おうちで楽しむ、澤井珈琲のアレンジコーヒーとスイーツ。', color:'var(--c-recipe)'},
-  {key:'brew',   num:'02', en:'BREWING', ja:'淹れ方の教科書',     desc:'同じ豆でも、淹れ方ひとつで味は変わる。専門店の技術を公開。', color:'var(--c-brew)'},
-  {key:'beans',  num:'03', en:'BEANS',   ja:'珈琲豆図鑑',         desc:'産地、品種、銘柄の物語。知るほどに、一杯が深くなる。', color:'var(--c-beans)'},
-  {key:'gift',   num:'04', en:'GIFT',    ja:'ギフト&特別な日',   desc:'大切な人へ、コーヒーで気持ちを贈る。季節の贈りもの案内。', color:'var(--c-gift)'},
-  {key:'life',   num:'05', en:'LIFE',    ja:'澤井珈琲のくらし', desc:'お店のこと、コーヒーのある毎日のこと。', color:'var(--c-life)'},
+  {key:'recipe', en:'RECIPE',  ja:'レシピ&アレンジ',   desc:'おうちで楽しむ、澤井珈琲のアレンジコーヒーとスイーツ。', color:'var(--c-recipe)'},
+  {key:'brew',   en:'BREWING', ja:'淹れ方の教科書',     desc:'同じ豆でも、淹れ方ひとつで味は変わる。専門店の技術を公開。', color:'var(--c-brew)'},
+  {key:'beans',  en:'BEANS',   ja:'珈琲豆図鑑',         desc:'産地、品種、銘柄の物語。知るほどに、一杯が深くなる。', color:'var(--c-beans)'},
+  {key:'gift',   en:'GIFT',    ja:'ギフト&特別な日',   desc:'大切な人へ、コーヒーで気持ちを贈る。季節の贈りもの案内。', color:'var(--c-gift)'},
+  {key:'life',   en:'LIFE',    ja:'澤井珈琲のくらし', desc:'お店のこと、コーヒーのある毎日のこと。', color:'var(--c-life)'},
 ];
 
 // 記事データ: 新しい記事が公開されたら、このITEMSに新しいオブジェクトを1行追加するだけでOK（並び順は自動で日付順に並び替わります）。
@@ -473,7 +487,6 @@ function renderShelves(){
     <section id="cat-${c.key}" class="shelf" style="--accent:${c.color}">
       <div class="shelf-inner">
         <div class="shelf-head">
-          <span class="shelf-num jost">${c.num}</span>
           <div class="shelf-heading">
             <p class="shelf-en">${c.en}</p>
             <h2>${c.ja}</h2>

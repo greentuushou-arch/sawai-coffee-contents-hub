@@ -66,26 +66,22 @@
   }
   .shop-link:hover{color:var(--red);border-color:var(--red);}
 
+  /* ---------- first view photo ---------- */
+  .fv{width:100%;background:#7c1c20;line-height:0;}
+  .fv-img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:2030/1039;}
+  @media(max-width:700px){
+    .fv-img{aspect-ratio:1000/1119;}
+  }
+
   /* ---------- hero ---------- */
   .hero{background:var(--bg);border-bottom:1px solid var(--line);}
   .hero-inner{
-    max-width:1180px;margin:0 auto;padding:64px 24px 56px;
+    max-width:1180px;margin:0 auto;padding:44px 24px 40px;
     display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
-  }
-  .hero-kicker{
-    font-family:"Jost";font-weight:500;font-size:14px;letter-spacing:.28em;
-    color:var(--red);margin:0 0 18px;
-  }
-  .hero h1{
-    font-size:clamp(40px,5.6vw,68px);
-    line-height:1.28;
-    font-weight:900;
-    margin:0 0 22px;
-    letter-spacing:.01em;
   }
   .hero-lead{
     font-size:16.5px;line-height:1.9;color:var(--ink-soft);
-    margin:0 0 30px;max-width:38em;
+    margin:0 0 24px;max-width:38em;
   }
   .hero-search{
     display:flex;align-items:flex-end;gap:10px;max-width:420px;
@@ -244,7 +240,6 @@
     .brand-name{font-size:16px;}
   }
   @media(max-width:520px){
-    .hero h1{font-size:36px;}
     .cup[data-cat="recipe"]{width:96px;height:96px;left:0%;top:4%;}
     .cup[data-cat="brew"]{width:124px;height:124px;left:32%;top:36%;}
     .cup[data-cat="beans"]{width:104px;height:104px;left:64%;top:2%;}
@@ -262,16 +257,21 @@
 <header class="site-header">
   <div class="brand">
     <span class="brand-mark">SC</span>
-    <span class="brand-name">SAWAI COFFEE<small>珈琲手帖 — COFFEE NOTES</small></span>
+    <span class="brand-name">SAWAI COFFEE<small>珈琲手帖 — COFFEE TOPICS</small></span>
   </div>
   <a class="shop-link" href="https://www.rakuten.co.jp/sawaicoffee-tea/" target="_blank" rel="noopener">澤井珈琲 Beans&amp;Leaf 本店へ ▶</a>
 </header>
 
+<section class="fv">
+  <picture>
+    <source media="(max-width: 700px)" srcset="images/fv-sp.jpg">
+    <img src="images/fv-pc.jpg" alt="淹れたてを読む時間 澤井珈琲 珈琲手帖 COFFEE TOPICS" class="fv-img">
+  </picture>
+</section>
+
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <p class="hero-kicker">COFFEE NOTES</p>
-      <h1>淹れたてを、<br>読む時間。</h1>
       <p class="hero-lead">産地のこと、淹れ方のこと、今日のひと工夫。澤井珈琲が届けてきた、読むコーヒーの時間。</p>
       <div class="hero-search">
         <span class="hero-search-icon"></span>

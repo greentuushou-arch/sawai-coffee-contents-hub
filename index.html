@@ -10,26 +10,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#f6efe1;
-    --cream-deep:#eee0c6;
-    --paper:#fbf7ee;
-    --ink:#2a1a10;
-    --ink-soft:#6b5642;
+    --bg:#ffffff;
+    --panel:#ffffff;
+    --thumb-bg:#f3f1ec;
+    --ink:#241811;
+    --ink-soft:#7a7064;
     --red:#a3272c;
     --red-deep:#7c1c20;
     --gold:#b4862a;
-    --line:rgba(42,26,16,.14);
+    --line:#e9e5dd;
     --c-recipe:#c98a4b;
     --c-brew:#8b5a2b;
     --c-beans:#43291a;
     --c-gift:#a3272c;
     --c-life:#b4862a;
+    --radius:18px;
+    --radius-sm:12px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background:var(--cream);
+    background:var(--bg);
     color:var(--ink);
     font-family:"Noto Sans JP",sans-serif;
     -webkit-font-smoothing:antialiased;
@@ -52,7 +54,7 @@
     width:34px;height:34px;border-radius:50%;
     background:var(--red);
     display:flex;align-items:center;justify-content:center;
-    color:var(--paper);font-family:"Jost";font-weight:600;font-size:13px;
+    color:#fff;font-family:"Jost";font-weight:600;font-size:13px;
     flex:none;
   }
   .brand-name{font-family:"Jost";font-weight:600;font-size:17px;letter-spacing:.06em;white-space:nowrap;}
@@ -65,7 +67,7 @@
   .shop-link:hover{color:var(--red);border-color:var(--red);}
 
   /* ---------- hero ---------- */
-  .hero{background:var(--cream-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .hero{background:var(--bg);border-bottom:1px solid var(--line);}
   .hero-inner{
     max-width:1180px;margin:0 auto;padding:64px 24px 56px;
     display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
@@ -85,7 +87,6 @@
     font-size:15px;line-height:1.9;color:var(--ink-soft);
     margin:0 0 30px;max-width:38em;
   }
-  .hero-lead .num{font-family:"Jost";color:var(--red);font-weight:600;}
   .hero-search{
     display:flex;align-items:flex-end;gap:10px;max-width:420px;
     border-bottom:2px solid var(--ink);padding-bottom:10px;
@@ -107,8 +108,8 @@
     position:absolute;border:none;cursor:pointer;
     border-radius:50%;
     display:flex;flex-direction:column;align-items:center;justify-content:center;
-    color:var(--paper);
-    box-shadow:0 10px 22px -10px rgba(42,26,16,.45), inset 0 -10px 18px -6px rgba(0,0,0,.35), inset 0 8px 14px -4px rgba(255,255,255,.18);
+    color:#fff;
+    box-shadow:0 14px 28px -14px rgba(42,26,16,.38), inset 0 -10px 18px -6px rgba(0,0,0,.35), inset 0 8px 14px -4px rgba(255,255,255,.18);
     background:
       radial-gradient(circle at 34% 28%, rgba(255,255,255,.34), rgba(255,255,255,0) 42%),
       radial-gradient(circle at 50% 50%, var(--cup-color), color-mix(in srgb, var(--cup-color) 65%, #1a0f08) 88%);
@@ -126,29 +127,34 @@
   /* ---------- index nav ---------- */
   .shelf-index{
     position:sticky;top:0;z-index:20;
-    background:var(--paper);border-bottom:1px solid var(--line);
+    background:rgba(255,255,255,.92);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
     overflow-x:auto;
   }
   .shelf-index-inner{
-    max-width:1180px;margin:0 auto;padding:0 24px;
-    display:flex;gap:0;
+    max-width:1180px;margin:0 auto;padding:10px 24px;
+    display:flex;gap:8px;
   }
   .nav-pill{
-    display:flex;align-items:center;gap:8px;
-    padding:13px 18px;font-size:12.5px;white-space:nowrap;
-    border-bottom:3px solid transparent;
+    display:flex;align-items:center;gap:7px;flex:none;
+    padding:9px 16px;font-size:12.5px;white-space:nowrap;
+    border-radius:999px;border:1px solid var(--line);
     color:var(--ink-soft);
   }
-  .nav-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--dot);flex:none;}
+  .nav-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--dot);flex:none;}
   .nav-pill .n{font-family:"Jost";color:var(--ink-soft);font-size:11px;}
-  .nav-pill.active{border-color:var(--dot);color:var(--ink);font-weight:500;}
-  .nav-pill:hover{color:var(--ink);}
+  .nav-pill.active{
+    background:color-mix(in srgb, var(--dot) 10%, white);
+    border-color:var(--dot);color:var(--ink);font-weight:500;
+  }
+  .nav-pill:hover{color:var(--ink);border-color:var(--dot);}
 
   /* ---------- shelves ---------- */
-  .shelf{padding:64px 0 8px;border-bottom:1px solid var(--line);}
+  .shelf{padding:60px 0 16px;border-bottom:1px solid var(--line);}
+  .shelf-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
   .shelf-head{
-    max-width:1180px;margin:0 auto;padding:0 24px 34px;
     display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:end;
+    margin-bottom:32px;
   }
   .shelf-num{font-family:"Jost";font-size:15px;color:var(--accent);letter-spacing:.1em;padding-bottom:6px;}
   .shelf-en{font-family:"Jost";font-size:12px;letter-spacing:.24em;color:var(--accent);margin:0 0 6px;}
@@ -158,69 +164,61 @@
   .shelf-count small{font-family:"Noto Sans JP";font-size:11px;color:var(--ink-soft);margin-left:2px;}
 
   .featured{
-    max-width:1180px;margin:0 auto 34px;padding:0 24px;
-    display:grid;grid-template-columns:.85fr 1.15fr;gap:0;
-    background:var(--paper);border:1px solid var(--line);
+    display:grid;grid-template-columns:.85fr 1.15fr;gap:0;margin-bottom:6px;
+    background:var(--panel);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;
   }
-  .featured-media{overflow:hidden;aspect-ratio:4/3;border-right:1px solid var(--line);}
-  .featured-media img{width:100%;height:100%;object-fit:cover;}
+  .featured-media{overflow:hidden;aspect-ratio:4/3;}
+  .featured-media img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+  .featured:hover .featured-media img{transform:scale(1.03);}
   .featured-body{padding:30px 36px;display:flex;flex-direction:column;justify-content:center;}
   .featured-tag{
     display:inline-block;font-family:"Jost";font-size:11px;letter-spacing:.16em;
-    color:var(--paper);background:var(--accent);padding:4px 10px;margin-bottom:16px;width:fit-content;
+    color:#fff;background:var(--accent);padding:4px 12px;border-radius:999px;margin-bottom:16px;width:fit-content;
   }
   .featured-body h3{font-size:clamp(18px,2vw,23px);line-height:1.6;margin:0 0 16px;font-weight:700;}
   .featured-body time{font-family:"Jost";font-size:12px;color:var(--ink-soft);letter-spacing:.05em;}
 
-  .shelf-row-wrap{position:relative;max-width:1180px;margin:0 auto;padding:0 24px;}
-  .shelf-row{
-    display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x proximity;
-    padding-bottom:8px;scrollbar-width:thin;
+  /* ---------- note-style list ---------- */
+  .note-list{display:flex;flex-direction:column;}
+  .note-row{
+    display:flex;align-items:center;gap:20px;
+    padding:18px 4px;border-bottom:1px solid var(--line);
   }
-  .bag{
-    flex:none;width:208px;scroll-snap-align:start;
-    background:var(--paper);border:1px solid var(--line);
+  .note-row:last-of-type{border-bottom:none;}
+  .note-thumb{
+    flex:none;width:128px;aspect-ratio:4/3;border-radius:var(--radius-sm);
+    overflow:hidden;background:var(--thumb-bg);
   }
-  .bag-media{aspect-ratio:4/3;overflow:hidden;position:relative;}
-  .bag-media img{width:100%;height:100%;object-fit:cover;}
-  .bag-media::after{
-    content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--accent);
+  .note-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease;}
+  .note-row:hover .note-thumb img{transform:scale(1.05);}
+  .note-body{flex:1;min-width:0;}
+  .note-title{
+    font-size:14.5px;line-height:1.7;margin:0 0 10px;font-weight:500;color:var(--ink);
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
   }
-  .bag-body{padding:14px 14px 16px;}
-  .bag-title{
-    font-size:12.5px;line-height:1.65;margin:0 0 10px;
-    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
-  }
-  .bag-date{font-family:"Jost";font-size:11px;color:var(--ink-soft);}
-  .bag:hover .bag-title{color:var(--accent);}
+  .note-row:hover .note-title{color:var(--accent);}
+  .note-meta{display:flex;align-items:center;gap:8px;}
+  .note-date{font-family:"Jost";font-size:11.5px;color:var(--ink-soft);}
+  .cat-dot{width:7px;height:7px;border-radius:50%;flex:none;}
 
-  .row-nav{
-    position:absolute;top:50%;transform:translateY(-58%);
-    width:34px;height:34px;border-radius:50%;border:1px solid var(--line);
-    background:var(--cream);color:var(--ink);font-size:16px;cursor:pointer;
-    display:flex;align-items:center;justify-content:center;
+  .load-more{
+    display:block;margin:22px auto 0;padding:11px 28px;
+    border:1px solid var(--line);border-radius:999px;background:#fff;
+    font-family:"Noto Sans JP";font-size:12.5px;color:var(--ink);cursor:pointer;
   }
-  .row-nav.prev{left:0;}
-  .row-nav.next{right:0;}
-  @media(min-width:901px){
-    .row-nav{display:flex;}
-    .shelf-row-wrap{padding:0 60px;}
-  }
-  @media(max-width:900px){
-    .row-nav{display:none;}
-  }
+  .load-more:hover{border-color:var(--accent);color:var(--accent);}
 
   /* ---------- search results ---------- */
   .search-results{max-width:1180px;margin:0 auto;padding:56px 24px 80px;}
-  .search-results-head{display:flex;align-items:baseline;gap:14px;margin-bottom:28px;}
+  .search-results-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;}
   .search-results-head h2{font-size:20px;margin:0;font-weight:700;}
   .search-results-head .n{font-family:"Jost";color:var(--red);font-size:14px;}
-  .search-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;}
   .search-empty{color:var(--ink-soft);font-size:14px;padding:20px 0;}
 
   /* ---------- footer ---------- */
   .site-footer{
-    background:var(--ink);color:var(--cream-deep);padding:48px 24px 30px;margin-top:20px;
+    background:var(--ink);color:#e9e0d6;padding:48px 24px 30px;margin-top:20px;
   }
   .footer-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;}
   .footer-brand{font-family:"Jost";font-size:16px;letter-spacing:.08em;}
@@ -233,13 +231,14 @@
     .hero-inner{grid-template-columns:1fr;padding:40px 20px 44px;gap:36px;}
     .cupping-tray{height:280px;order:-1;}
     .featured{grid-template-columns:1fr;}
-    .featured-media{border-right:none;border-bottom:1px solid var(--line);}
     .shelf-head{grid-template-columns:auto 1fr;}
     .shelf-count{grid-column:2;justify-self:start;padding-top:4px;}
     .site-header{padding:16px 20px;flex-wrap:wrap;row-gap:10px;}
     .shop-link{font-size:11.5px;}
-    .wrap,.hero-inner,.shelf-head,.featured,.shelf-row-wrap,.search-results{padding-left:20px;padding-right:20px;}
+    .wrap,.hero-inner,.shelf-inner,.search-results{padding-left:20px;padding-right:20px;}
     .footer-copy{padding-left:20px;padding-right:20px;}
+    .note-thumb{width:104px;}
+    .note-row{gap:14px;padding:16px 2px;}
   }
   @media(max-width:400px){
     .brand-name{font-size:15px;}
@@ -253,7 +252,8 @@
     .cup[data-cat="life"]{width:98px;height:98px;left:66%;top:60%;}
     .cup-count{font-size:21px;}
     .cup-label{font-size:9.5px;}
-    .bag{width:172px;}
+    .note-thumb{width:86px;}
+    .note-title{font-size:13.5px;}
   }
 </style>
 </head>
@@ -272,7 +272,7 @@
     <div class="hero-text">
       <p class="hero-kicker">COFFEE NOTES</p>
       <h1>淹れたてを、<br>読む時間。</h1>
-      <p class="hero-lead">産地のこと、淹れ方のこと、今日のひと工夫。澤井珈琲が届けてきた読みもの、<span class="num jost" id="totalCount">–</span>本。</p>
+      <p class="hero-lead">産地のこと、淹れ方のこと、今日のひと工夫。澤井珈琲が届けてきた、読むコーヒーの時間。</p>
       <div class="hero-search">
         <span class="hero-search-icon"></span>
         <label for="searchInput" class="jost">SEARCH</label>
@@ -294,7 +294,7 @@
     <h2>検索結果</h2>
     <span class="n jost" id="searchCount"></span>
   </div>
-  <div class="search-grid" id="searchGrid"></div>
+  <div class="note-list" id="searchGrid"></div>
 </section>
 
 <footer class="site-footer">
@@ -326,12 +326,10 @@ const SYN_GROUPS = [
   ['器具','ドリッパー','フィルター'],
 ];
 
+const BATCH = 6;
+
 function fmtDate(d){ return d.replace(/-/g,'.'); }
 function catOf(key){ return CATS.find(c=>c.key===key); }
-
-function renderTotal(){
-  document.getElementById('totalCount').textContent = ITEMS.length;
-}
 
 function renderTray(){
   const tray = document.getElementById('cuppingTray');
@@ -359,12 +357,14 @@ function renderNav(){
   }).join('');
 }
 
-function bagCard(it){
-  return `<a class="bag" href="${it.href}" target="_blank" rel="noopener">
-    <div class="bag-media"><img src="${it.img}" alt="" loading="lazy"></div>
-    <div class="bag-body">
-      <p class="bag-title">${it.title}</p>
-      <time class="bag-date jost">${fmtDate(it.date)}</time>
+function noteRow(it, opts){
+  opts = opts || {};
+  const dot = opts.showDot ? `<span class="cat-dot" style="background:${catOf(it.cat).color}"></span>` : '';
+  return `<a class="note-row" href="${it.href}" target="_blank" rel="noopener">
+    <div class="note-thumb"><img src="${it.img}" alt="" loading="lazy"></div>
+    <div class="note-body">
+      <p class="note-title">${it.title}</p>
+      <div class="note-meta">${dot}<time class="note-date jost">${fmtDate(it.date)}</time></div>
     </div>
   </a>`;
 }
@@ -375,40 +375,54 @@ function renderShelves(){
     const catItems = ITEMS.filter(i=>i.cat===c.key);
     const featured = catItems[0];
     const rest = catItems.slice(1);
+    const rowsHtml = rest.map((it,i)=>{
+      const hiddenAttr = i >= BATCH ? ' hidden' : '';
+      return `<div class="note-row-wrap" data-idx="${i}"${hiddenAttr}>${noteRow(it)}</div>`;
+    }).join('');
+    const moreCount = Math.max(0, rest.length - BATCH);
+    const loadMoreBtn = moreCount > 0
+      ? `<button class="load-more" data-cat="${c.key}" data-shown="${BATCH}">もっと見る<span class="jost"> (+${Math.min(BATCH, moreCount)})</span></button>`
+      : '';
     return `
     <section id="cat-${c.key}" class="shelf" style="--accent:${c.color}">
-      <div class="shelf-head">
-        <span class="shelf-num jost">${c.num}</span>
-        <div class="shelf-heading">
-          <p class="shelf-en">${c.en}</p>
-          <h2>${c.ja}</h2>
-          <p class="shelf-desc">${c.desc}</p>
+      <div class="shelf-inner">
+        <div class="shelf-head">
+          <span class="shelf-num jost">${c.num}</span>
+          <div class="shelf-heading">
+            <p class="shelf-en">${c.en}</p>
+            <h2>${c.ja}</h2>
+            <p class="shelf-desc">${c.desc}</p>
+          </div>
+          <span class="shelf-count jost">${catItems.length}<small>本</small></span>
         </div>
-        <span class="shelf-count jost">${catItems.length}<small>本</small></span>
-      </div>
-      <a class="featured" href="${featured.href}" target="_blank" rel="noopener">
-        <div class="featured-media"><img src="${featured.img}" alt="" loading="lazy"></div>
-        <div class="featured-body">
-          <span class="featured-tag">最新の一本</span>
-          <h3>${featured.title}</h3>
-          <time class="jost">${fmtDate(featured.date)}</time>
-        </div>
-      </a>
-      <div class="shelf-row-wrap">
-        <button class="row-nav prev" data-row="${c.key}" aria-label="前へ">‹</button>
-        <div class="shelf-row" data-row="${c.key}">
-          ${rest.map(bagCard).join('')}
-        </div>
-        <button class="row-nav next" data-row="${c.key}" aria-label="次へ">›</button>
+        <a class="featured" href="${featured.href}" target="_blank" rel="noopener">
+          <div class="featured-media"><img src="${featured.img}" alt="" loading="lazy"></div>
+          <div class="featured-body">
+            <span class="featured-tag">最新の一本</span>
+            <h3>${featured.title}</h3>
+            <time class="jost">${fmtDate(featured.date)}</time>
+          </div>
+        </a>
+        <div class="note-list" data-cat="${c.key}">${rowsHtml}</div>
+        ${loadMoreBtn}
       </div>
     </section>`;
   }).join('');
 
-  main.querySelectorAll('.row-nav').forEach(btn=>{
+  main.querySelectorAll('.load-more').forEach(btn=>{
     btn.addEventListener('click', ()=>{
-      const row = main.querySelector(`.shelf-row[data-row="${btn.dataset.row}"]`);
-      const dir = btn.classList.contains('next') ? 1 : -1;
-      row.scrollBy({left: dir * 460, behavior:'smooth'});
+      const list = main.querySelector(`.note-list[data-cat="${btn.dataset.cat}"]`);
+      const rows = Array.from(list.querySelectorAll('.note-row-wrap'));
+      const shown = parseInt(btn.dataset.shown, 10);
+      const next = shown + BATCH;
+      rows.forEach(r=>{ if(parseInt(r.dataset.idx, 10) < next) r.hidden = false; });
+      const remaining = rows.length - next;
+      if(remaining <= 0){
+        btn.remove();
+      } else {
+        btn.dataset.shown = next;
+        btn.querySelector('span').textContent = ` (+${Math.min(BATCH, remaining)})`;
+      }
     });
   });
 }
@@ -440,14 +454,9 @@ function runSearch(q){
   document.getElementById('searchCount').textContent = found.length + ' 件';
   const grid = document.getElementById('searchGrid');
   if(found.length === 0){
-    grid.innerHTML = '';
-    grid.insertAdjacentHTML('beforebegin', '');
     grid.innerHTML = `<p class="search-empty">該当する読みものが見つかりませんでした。別のキーワードでお試しください。</p>`;
   } else {
-    grid.innerHTML = found.map(it=>{
-      const c = catOf(it.cat);
-      return bagCard(it).replace('class="bag"', `class="bag" style="--accent:${c.color}"`);
-    }).join('');
+    grid.innerHTML = found.map(it=>noteRow(it, {showDot:true})).join('');
   }
 }
 
@@ -465,7 +474,6 @@ function initNavHighlight(){
   sections.forEach(s=>s && obs.observe(s));
 }
 
-renderTotal();
 renderTray();
 renderNav();
 renderShelves();

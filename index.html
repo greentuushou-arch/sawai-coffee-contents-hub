@@ -73,6 +73,23 @@
     .fv-img{aspect-ratio:1000/1119;}
   }
 
+  /* ---------- feature ---------- */
+  .feature{padding:52px 0 8px;border-bottom:1px solid var(--line);}
+  .feature-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .feature-head{margin-bottom:22px;}
+  .feature-en{font-family:"Jost";font-size:13px;letter-spacing:.24em;color:var(--red);margin:0 0 6px;}
+  .feature-head h2{font-size:clamp(22px,2.6vw,28px);margin:0;font-weight:900;}
+  .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .feature-card{
+    display:block;border-radius:var(--radius);overflow:hidden;
+    border:1px solid var(--line);background:var(--panel);
+  }
+  .feature-card img{width:100%;aspect-ratio:1200/1528;object-fit:cover;display:block;transition:transform .4s ease;}
+  .feature-card:hover img{transform:scale(1.03);}
+  @media(max-width:700px){
+    .feature-grid{grid-template-columns:1fr;}
+  }
+
   /* ---------- hero ---------- */
   .hero{background:var(--bg);border-bottom:1px solid var(--line);}
   .hero-inner{
@@ -282,6 +299,23 @@
     <source media="(max-width: 700px)" srcset="images/fv-sp.jpg">
     <img src="images/fv-pc.jpg" alt="淹れたてを読む時間 澤井珈琲 珈琲手帖 COFFEE TOPICS" class="fv-img">
   </picture>
+</section>
+
+<section class="feature">
+  <div class="feature-inner">
+    <div class="feature-head">
+      <p class="feature-en">FEATURE</p>
+      <h2>特集</h2>
+    </div>
+    <div class="feature-grid">
+      <a class="feature-card" href="https://www.rakuten.ne.jp/gold/sawaicoffee-tea/event/magazine2610/" target="_blank" rel="noopener">
+        <img src="images/feature-01.jpg" alt="月刊サワイコーヒーマニア 10月号 秋を楽しむ澤井珈琲" loading="lazy">
+      </a>
+      <a class="feature-card" href="https://www.rakuten.ne.jp/gold/sawaicoffee-tea/event/catalog2610/" target="_blank" rel="noopener">
+        <img src="images/feature-02.jpg" alt="WEB catalog 2026年10月 冬ギフト特集" loading="lazy">
+      </a>
+    </div>
+  </div>
 </section>
 
 <section class="hero">
